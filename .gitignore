@@ -1,24 +1,38 @@
+# Node modules
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Environment files
+.env
+.env.* 
+
 # Logs
-logs
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# OS files
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Dependency directories (if you're using other package managers or tools)
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Coverage
+coverage/
+
+# Next.js specific (if using Next.js)
+.next/
+
+# Temporary files created by tools or running the project
+*.log
