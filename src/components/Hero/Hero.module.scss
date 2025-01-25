@@ -1,0 +1,100 @@
+@import '../../styles/contants.scss';
+
+.wrapper {
+    overflow: hidden;
+
+
+    .container {
+        position: relative;
+        z-index: 1;
+
+        .upperElements {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @media (max-width: $sm) {
+                justify-content: center;
+                text-align: center;
+                gap: 2rem;
+            }
+           
+        }
+
+
+        .lowerElements {
+            margin-top: 12rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @media (max-width: $sm), (max-width: $md) {
+                margin-top: 4rem;
+                gap: 2rem;
+                justify-content: center;
+            }
+           
+            .experience {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                >:nth-child(2) {
+                    line-height: 25px;
+                }
+            }
+
+            .certificate {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    margin-bottom: 1rem;
+                    width: 3.5rem;
+                }
+            }
+        }
+
+        .person {
+            position: absolute;
+            bottom: -2rem;
+            margin: auto;
+            left: 33%;
+            background-image: url("../splash.png");
+            background-repeat: no-repeat;
+            background-size: 23rem;
+            background-position: bottom;
+        
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centers the child elements */
+        
+            img {
+                width: 100%; /* Make the image responsive */
+                height: auto; /* Maintain the aspect ratio */
+                max-width: 23rem; /* Limit the maximum size */
+                margin-bottom: -5px;
+        
+                @media (max-width: $md) {
+                    max-width: 20rem; /* Adjust size for medium screens */
+                }
+        
+                @media (max-width: $sm) {
+                    max-width: 18rem; /* Adjust size for smaller screens */
+                }
+            }
+        }
+        
+
+        .email {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            color: orange;
+            @media (max-width: $sm ) {
+                position: relative;
+                display: none;
+            }
+           
+        }
+    }
+}
