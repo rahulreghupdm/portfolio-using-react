@@ -55,31 +55,41 @@
         }
 
         .person {
-            position: absolute;
+            
             bottom: -2rem;
             margin: auto;
+            position: absolute;
             left: 33%;
             background-image: url("../splash.png");
             background-repeat: no-repeat;
             background-size: 23rem;
             background-position: bottom;
-        
             display: flex;
             align-items: center;
-            justify-content: center; /* Centers the child elements */
+            justify-content: center;
+            @media (max-width: $md) {
+                position: absolute;
+                left: 33%;  
+            }
+    
+            @media (max-width: $sm) {
+                position: relative;
+                left: 0%;
+                bottom: 1%;
+            }
         
             img {
-                width: 100%; /* Make the image responsive */
-                height: auto; /* Maintain the aspect ratio */
-                max-width: 23rem; /* Limit the maximum size */
+                width: 100%; 
+                height: auto; 
+                max-width: 23rem; 
                 margin-bottom: -5px;
         
                 @media (max-width: $md) {
-                    max-width: 20rem; /* Adjust size for medium screens */
+                    max-width: 20rem; 
                 }
         
                 @media (max-width: $sm) {
-                    max-width: 18rem; /* Adjust size for smaller screens */
+                    max-width: 18rem;
                 }
             }
         }

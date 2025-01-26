@@ -20,11 +20,17 @@
         }
 
         .menu {
+            text-transform: uppercase;
+            font-size: 1rem;
+            list-style: none;
+            gap: 1.5rem;
+            cursor: pointer;
 
             @media (max-width: $sm),
             (max-width: $md) {
                 position: absolute;
                 list-style: none;
+                display: none; 
                 gap: 2rem;
                 font-weight: 500;
                 flex-direction: column;
@@ -35,20 +41,19 @@
                 min-width: 15rem;
                 background: white;
                 padding: 2rem;
-                display: flex;
                 border-radius: 10px;
                 transition: all 200ms ease;
                 align-items: flex-start;
                 padding: 3rem;
                 justify-content: flex-start;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+                &.open {
+                    display: flex; 
+                  }
+                  
             }
 
-            text-transform: uppercase;
-            font-size: 1rem;
-            list-style: none;
-            gap: 1.5rem;
-            cursor: pointer;
+          
 
             li {
                 a {
@@ -78,13 +83,13 @@
 
 
         .menuIcon {
-
+            display: none;
             @media (max-width: $sm),
             (max-width: $md) {
                 display: block;
             }
 
-            display: none;
+           
         }
     }
 }

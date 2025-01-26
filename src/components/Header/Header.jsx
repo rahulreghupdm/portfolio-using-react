@@ -13,11 +13,14 @@ const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerShadow = useHeaderShadow();
 
-  //to handle click outside of sidebar on mobile
   useOutsideAlerter({
     menuRef,
     setMenuOpened,
   });
+
+  const closeMenu = () => {
+    setMenuOpened(false);
+  };
 
   return (
     <motion.div
@@ -31,17 +34,16 @@ const Header = () => {
       <div className={`innerWidth ${css.container} flexCenter`}>
         <div className={css.name}></div>
         <ul
-          className={`flexCenter ${css.menu}`}
+          className={`flexCenter ${css.menu} ${menuOpened ? css.open : ""}`}
           ref={menuRef}
           style={getMenuStyles(menuOpened)}
         >
-         
-          <li><a href="#work">Experience</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#work" onClick={closeMenu}>Experience</a></li>
+          <li><a href="#portfolio" onClick={closeMenu}>Portfolio</a></li>
           <li>
          <Link to="/blogs">Blogs</Link>
           </li>
-          <li><a href="#skils">Skills</a></li>
+          <li><a href="#skils" onClick={closeMenu}>Skills</a></li>
           <li className={`flexCenter ${css.phone}`}>
             <BiLogoLinkedinSquare size={"40px"} onClick={()=>{
               window.open("https://www.linkedin.com/in/rahul-reghu-dev/","_blank")
@@ -51,7 +53,9 @@ const Header = () => {
 
         <div
           className={css.menuIcon}
-          onClick={() => setMenuOpened((prev) => !prev)}
+          onClick={() => {
+            console.log("check");
+            setMenuOpened((prev) => !prev)}}
         >
           <BiMenuAltRight size={30} />
         </div>

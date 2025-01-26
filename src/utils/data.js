@@ -144,6 +144,27 @@ export const skills = [
       "A suite of cloud computing services for deploying, managing, and scaling applications.",
     img: "./gcp.png",
   },
+  {
+    name: "System Design",
+    post: "Architecture",
+    comment:
+      "The process of defining the overall structure, components, and interactions of a system to meet specific requirements.",
+    img: "./system-design.png",
+  },
+  {
+    name: "Git",
+    post: "Version Control",
+    comment:
+      "A distributed version control system that allows developers to track changes and collaborate efficiently.",
+    img: "./git.png",
+  },
+  {
+    name: "Project Architecture",
+    post: "Software Design",
+    comment:
+      "The foundational structure and organization of a software system, focusing on scalability and maintainability.",
+    img: "./project-architecture.png",
+  },
 ];
 
 
