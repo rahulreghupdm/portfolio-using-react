@@ -18,7 +18,7 @@ const Hero = () => {
   const [experience, setExperience] = useState(0);
 
   useEffect(() => {
-    const startDate = "2022-04-01"; // Replace with your start date (YYYY-MM-DD)
+    const startDate = "2022-03-01"; // Replace with your start date (YYYY-MM-DD)
     setExperience(calculateExperience(startDate));
   }, []);
   return (
