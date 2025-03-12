@@ -31,14 +31,14 @@ export const workExp = [
   {
     place: "Neurocode International Pvt Ltd",
     tenure: "Aug 2024 - Present",
-    role: "CTO & Project Manager",
+    role: "Full-Stack App Developer & CTO",
     detail:
       "Led the development and management of innovative technology solutions, overseeing multiple teams and projects. Successfully implemented strategies to enhance efficiency, scalability, and product delivery while ensuring alignment with business goals.",
   },
   {
     place: "Notech Tricon Pvt Ltd",
     tenure: "Aug 2022 - Aug 2024",
-    role: "App Developer and Project Manager",
+    role: "Full-Stack App Developer and Project Manager",
     detail:
       "Developed and managed mobile and web applications, ensuring seamless user experiences and robust functionality. Coordinated cross-functional teams, managed project timelines, and delivered high-quality solutions within budget.",
   },
